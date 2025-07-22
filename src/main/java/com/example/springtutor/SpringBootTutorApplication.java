@@ -1,4 +1,4 @@
-package com.example.spring_boot_tutor;
+package com.example.springtutor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
