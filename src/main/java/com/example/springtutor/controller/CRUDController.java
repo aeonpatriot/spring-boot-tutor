@@ -1,8 +1,6 @@
 package com.example.springtutor.controller;
 
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springtutor.model.Data;
-import com.example.springtutor.service.ItemService;
-import com.example.springtutor.service.ItemServiceAnalysis;
 
 @RestController
 @RequestMapping("/demo/v1") // Base path for all endpoints in this controller
@@ -43,14 +39,7 @@ public class CRUDController {
 
 //	private final Map<Long, String> dataStore = new ConcurrentHashMap<>();
 //	private final AtomicLong idCounter = new AtomicLong();
-	
-    private final ItemService itemService;
-    private final ItemServiceAnalysis itemServiceAnalysis;
 
-    public CRUDController(ItemService itemService, ItemServiceAnalysis itemServiceAnalysis) {
-        this.itemService = itemService;
-        this.itemServiceAnalysis = itemServiceAnalysis;
-    }
 
 	// --- CREATE (HTTP POST) ---
 	@PostMapping
