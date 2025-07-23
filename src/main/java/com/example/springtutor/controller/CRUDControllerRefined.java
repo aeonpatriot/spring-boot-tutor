@@ -19,6 +19,9 @@ import com.example.springtutor.service.ItemServiceAnalysis;
 import com.example.springtutor.util2.ResponseEntityUtil;
 import com.example.springtutor.validation.ItemValidation;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 @RestController
 @RequestMapping("/demo/v2")
 public class CRUDControllerRefined {
@@ -26,10 +29,10 @@ public class CRUDControllerRefined {
     private final ItemService itemService;
     private final ItemServiceAnalysis itemServiceAnalysis;
 
-    public CRUDControllerRefined(ItemService itemService, ItemServiceAnalysis itemServiceAnalysis) {
-        this.itemService = itemService;
-        this.itemServiceAnalysis = itemServiceAnalysis;
-    }
+//    public CRUDControllerRefined(ItemService itemService, ItemServiceAnalysis itemServiceAnalysis) {
+//        this.itemService = itemService;
+//        this.itemServiceAnalysis = itemServiceAnalysis;
+//    }
 
     // --- CREATE (Auto-generated ID) ---
     @PostMapping
